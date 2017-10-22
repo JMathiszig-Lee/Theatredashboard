@@ -1,0 +1,32 @@
+
+<div class = "b[[item.ready_code]]">
+  <span class="a[[item.consented]] check" ng-show="item.consented">
+      consented
+  </span>
+  <span class="a[[item.equipment]]  check" ng-show="item.equipment">
+      equipment available
+  </span>
+  <span class="a[[item.blood]] check" ng-show="item.blood">
+      bloods checked
+  </span>
+  <span class="a[[item.seen_by_anaes]] check" ng-show="item.seen_by_anaes">
+      Anaesthetic visit
+  </span>
+  <span class="a[[item.ward_ready]] check" ng-show="item.ward_ready">
+      Ward Ready
+  </span>
+  <span class="a[[item.surg_available]] check">
+      Surgeon Available
+  </span>
+</br>
+</br>
+
+  <span class="check" ng-show="item.porter_sent">
+      Porter Sent
+      [[ item.porter_sent | shortDateTime ]]
+  </span>
+  <span class="check" ng-show="item.gone_collect">
+      Porter Collecting
+      [[ item.gone_collect | shortDateTime ]]
+  </span>
+</div>

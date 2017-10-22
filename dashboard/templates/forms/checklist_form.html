@@ -1,0 +1,78 @@
+{% load forms %}
+
+<div class="form-group">
+  consented
+  <div class="form-control">
+    <input type="radio" ng-model="editing.checklist.consented" value="1" name="consented" onchange="readyScore()"/>No
+    <input type="radio" ng-model="editing.checklist.consented" value="2" name="consented" onchange="readyScore()"/>Yes
+  </div>
+</div>
+
+<div class="form-group">
+  Equipment available
+  <div class="form-control">
+    <input type="radio" ng-model="editing.checklist.equipment" value="1" name="equipment" />No
+    <input type="radio" ng-model="editing.checklist.equipment" value="2" name="equipment" />Yes
+  </div>
+</div>
+<div class="form-group">
+  Bloods checked
+  <div class="form-control">
+    <input type="radio" ng-model="editing.checklist.blood" value="1" name="blood" />No
+    <input type="radio" ng-model="editing.checklist.blood" value="2" name="blood" />Yes
+  </div>
+</div>
+<div class="form-group">
+  Pre-op anaesthetic visit completed?
+  <div class="form-control">
+    <input type="radio" ng-model="editing.checklist.seen_by_anaes" value="1" name="seen_by_anaes" />No
+    <input type="radio" ng-model="editing.checklist.seen_by_anaes" value="2" name="seen_by_anaes" />Yes
+  </div>
+</div>
+<div class="form-group">
+  Surgeon Available?
+  <div class="form-control">
+    <input type="radio" ng-model="editing.checklist.surg_available" value="1" name="surg_available" />No
+    <input type="radio" ng-model="editing.checklist.surg_available" value="2" name="surg_available" />Yes
+  </div>
+</div>
+<div class="form-group">
+  Ward Ready?
+  <div class="form-control">
+    <input type="radio" ng-model="editing.checklist.ward_ready" value="1" name="ward_ready" />No
+    <input type="radio" ng-model="editing.checklist.ward_ready" value="2" name="ward_ready" />Yes
+  </div>
+</div>
+{% datetimepicker  field="Checklist.porter_sent"  %}
+{% datetimepicker  field="Checklist.gone_collect"  %}
+<!-- {% input field="Checklist.ready_code"%} -->
+<div class="form-group">
+  readycode
+  <div class="form-control">
+    <input type="number" ng-model="editing.checklist.ready_code" name="ready" />
+  </div>
+</div>
+
+<script>
+  function readyScore(){
+    var a = parseInt(document.form.consented.value);
+    var b = parseInt(document.form.equipment.value);
+    var c = parseInt(document.form.blood.value);
+    var d = parseInt(document.form.seen_by_anaes.value);
+    var e = parseInt(document.form.surg_available.value);
+    var f = parseInt(document.form.ward_ready.value);
+    g = a + b + c + d + e + f;
+    //alert(g);
+
+    if (g != 12) {
+      angular.module('opal.controllers').controller(
+        'readycontroller',
+        function($scope){
+          $scope.editing.checklist.ready_code.value = 1;
+        });
+      //document.form.ready.value = 1;
+    } else {
+      document.form.ready.value = 2;
+    }
+  }
+</script>

@@ -1,0 +1,28 @@
+.a1{
+  background-color: #ff0000;
+}
+
+.a2{
+  background-color: #00ff00;
+}
+.b0{
+  background-color: #ff0000;
+  padding: 10px;
+}
+.b1{
+  background-color: #ff0000;
+}
+.b2{
+  background-color: #00ff00;
+}
+.check{
+  padding: 5px;
+  border-style: solid;
+  border-width: thin;
+  height: 50px;
+  width: 200px;
+
+}
+
+.oplist{
+}
