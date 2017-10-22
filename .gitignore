@@ -1,0 +1,15 @@
+*~
+.sass-cache/
+*.sqlite
+*.pyc
+static/*
+.coverage
+htmlcov
+libpeerconnection.log
+venv
+bin
+include
+lib
+pip-selfcheck.json
+djcelery
+lib64
