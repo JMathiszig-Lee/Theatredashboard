@@ -1,0 +1,52 @@
+{
+  "operations":[
+    {
+      "name": "Dynamic Hip Screw",
+      "synonyms": ["screw", "DHS", "dhs", "hemi"],
+    },
+    {
+      "name": "Total Hip Replacement",
+      "synonyms": ["THR"],
+    },
+    {
+      "name": "Wound washout",
+      "synonyms": [""],
+    },
+    {
+      "name": "Revision Total Hip Replacement",
+      "synonyms": ["Revision"],
+    },
+    {
+      "name": "Tibial Nail",
+      "synonyms": [""],
+    },
+    {
+      "name": "Femoral Nail",
+      "synonyms": [""],
+    },
+    {
+      "name": "ORIF tibia",
+      "synonyms": [""],
+    },
+    {
+      "name": "ORIF ankle",
+      "synonyms": [""],
+    },
+    {
+      "name": "ORIF wrist",
+      "synonyms": [""],
+    },
+    {
+      "name": "Lizerow frame",
+      "synonyms": [""],
+    },
+    {
+      "name": "External Fixation",
+      "synonyms": ["exfix"],
+    },
+    {
+      "name": "Total shoulder replacement",
+      "synonyms": [""],
+    },
+  ]
+}

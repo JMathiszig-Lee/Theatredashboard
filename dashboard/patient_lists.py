@@ -20,7 +20,8 @@ class AllPatientsList(core.patient_lists.PatientList):
 
 class OperatingList(core.patient_lists.PatientList):
     display_name = 'Op List'
-    queryset = Episode.objects.all()
+    queryset = Episode.objects.all().order_by('?')
+
     #direct_add = False
     schema = [
         models.OpList,

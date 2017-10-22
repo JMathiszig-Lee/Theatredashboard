@@ -9,6 +9,7 @@ class Application(application.OpalApplication):
         'js/opal/controllers/discharge.js',
         # Uncomment this if you want to implement custom dynamic flows.
         # 'js/dashboard/flow.js',
+        'js/dashboard/controllers/readycontroller.js',
     ]
     styles = [
         "css/dashboard.css",

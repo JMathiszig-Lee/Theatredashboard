@@ -38,6 +38,8 @@ class Checklist(models.EpisodeSubrecord):
     #ITUBED
 
 class OpList(models.EpisodeSubrecord):
+    _is_singleton = True
+    
     op_ID = db_models.IntegerField (null=True)
     order = db_models.IntegerField (null = True)
     Pat_ID = db_models.IntegerField (null=True)
